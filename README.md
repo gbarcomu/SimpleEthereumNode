@@ -52,9 +52,18 @@ Ejecutar la consola de **geth** con el comando:
 geth attach /opt/data/geth.ipc
 ```
 
+Una vez desplegado el **Bootnode** citado en la **Introducción** es posible comprobar que este nodo se ha conectado correctamente ejecutando en la terminal de **geth**:
+```
+admin.peers
+```
+Al menos debería verse un **enode** cuya dirección coincida con la del archivo "enode" dentro de la carpeta "common"
+
+Para ver la dirección del contrato que el Bootnode despliega hay que ejecutar:
+```
+eth.getTransactionReceipt(<transaction address>)
+```
+Este address se puede observar en la consola del **Bootnode** al desplegarlo.
+
 Una lista completa de los comandos que se pueden ejecutar en esta consola se encuentra en el repositorio oficial de **Ethereum**:
 
 [Documentación Geth](https://github.com/ethereum/go-ethereum/wiki/geth)
-
-
-
