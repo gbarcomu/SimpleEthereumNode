@@ -1,0 +1,10 @@
+# MAINTAINER Blockchain_team
+version: "3"
+services: 
+  node:
+    build:
+      context: .
+    user: "root"
+    volumes:
+      - ./common:/opt/common
+    command: sh ./opt/common/startNode.sh 
