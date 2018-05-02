@@ -58,11 +58,25 @@ admin.peers
 ```
 Al menos debería verse un **enode** cuya dirección coincida con la del archivo "enode" dentro de la carpeta "common"
 
+### Interacción con un Contrato
+
 Para ver la dirección del contrato que el Bootnode despliega hay que ejecutar:
 ```
 eth.getTransactionReceipt(<transaction address>)
 ```
 Este address se puede observar en la consola del **Bootnode** al desplegarlo.
+
+Para ver el contenido de una transacción de un SmartContract basta con ejecutar:
+
+```
+eth.getTransaction(<transaction address>).input
+```
+
+Y a continuación:
+
+```
+web3.toAscii(<Resultado del comando anterior>)
+```
 
 Una lista completa de los comandos que se pueden ejecutar en esta consola se encuentra en el repositorio oficial de **Ethereum**:
 
