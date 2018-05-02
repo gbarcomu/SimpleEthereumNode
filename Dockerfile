@@ -1,9 +1,10 @@
 FROM ubuntu:16.04
-MAINTAINER Blockchain Team 
+LABEL Blockchain Team 
 
 ENV DEBIAN_FRONTEND noninteractive
 
 # Usual update / upgrade
+RUN apt-get clean
 RUN apt-get update
 RUN apt-get upgrade -q -y
 RUN apt-get dist-upgrade -q -y
